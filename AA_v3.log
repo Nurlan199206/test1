@@ -1,0 +1,11 @@
+20160429-15:04:47.441 000011D0 - ERROR: ERROR 10054 -1 in TransportTCP2::ReadExact()#2 in Vr::run_un
+20160429-15:05:22.901 00003128 - ERROR: ERROR 0 0 in TransportTCP2::ReadExact()#2 in Vr::run_un
+20160429-18:02:47.109 00001104 - ERROR: ERROR 10054 -1 in TransportTCP2::ReadExact()#2 in Vr::run_un
+20160503-11:25:05.541 00001BE8 - ERROR: ERROR 10054 -1 in TransportTCP2::ReadExact()#2 in Vr::run_un
+20160514-10:59:26.839 00002134 - ERROR: ERROR 10054 -1 in TransportTCP2::ReadExact()#2 in Vr::run_un
+20160514-16:43:45.328 0000254C - ERROR: ERROR 10054 -1 in TransportTCP1::ReadExact()#2 in TrClient::Run()#239
+20160515-21:03:47.799 00001E50 - ERROR: ERROR 10054 -1 in TransportTCP1::ReadExact()#2 in TrClient::Run()#239
+20160517-13:45:48.719 00001760 - ERROR: ERROR 0 0 in TransportTCP2::ReadExact()#2 in Vr::run_un
+20160518-17:53:19.916 00003928 - ERROR: ERROR 0 0 in TransportTCP2::ReadExact()#2 in Vr::run_un
+20161013-15:12:44.174 00004328 - ERROR: ERROR 0 0 in TransportTCP2::ReadExact()#2 in Vr::run_un
+20161013-15:16:46.668 00004130 - ERROR: ERROR 10054 -1 in TransportTCP2::ReadExact()#2 in Vr::run_un
