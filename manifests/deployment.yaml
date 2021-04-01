@@ -14,7 +14,7 @@ spec:
         app: test1
     spec:
       containers:
-      - image: nurlan1992/test1:v4
+      - image: ${{ steps.meta.outputs.tags }}
         name: test1
         ports:
         - containerPort: 5000
