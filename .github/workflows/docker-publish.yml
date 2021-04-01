@@ -62,9 +62,3 @@ jobs:
         with:
           push: true
           tags: nurlan1992/hello-world:${{ steps.meta.outputs.tags }}
-
-          echo IMAGE_ID=$IMAGE_ID
-          echo VERSION=$VERSION
-
-          docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
-          docker push $IMAGE_ID:$VERSION
