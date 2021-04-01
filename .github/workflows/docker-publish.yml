@@ -70,4 +70,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: nurlan1992/hello-world:${{ steps.meta.outputs.tags }}
+          tags: nurlan1992/hello-world:asdasd
