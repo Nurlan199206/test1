@@ -54,7 +54,7 @@ jobs:
         with:
           images: nurlan1992/test1
           tags: |
-            type=ref,event=branch
+            type=sha,enable=true,priority=100,prefix=test1-,suffix=
             type=ref,event=pr
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
