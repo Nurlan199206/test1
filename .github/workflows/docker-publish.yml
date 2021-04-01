@@ -56,21 +56,13 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Push image
-        run: |
-          IMAGE_ID=nurlan1992/test1:$IMAGE_NAME
-
-          # Change all uppercase to lowercase
-          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
-
-          # Strip git ref prefix from version
-          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
-
-          # Strip "v" prefix from tag name
-          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
-
-          # Use Docker `latest` tag convention
-          [ "$VERSION" == "master" ] && VERSION=latest
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: nurlan1992/hello-world:${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
 
           echo IMAGE_ID=$IMAGE_ID
           echo VERSION=$VERSION
