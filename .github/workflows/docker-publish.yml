@@ -73,7 +73,8 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           
-  
+      - name: 'Kustomize'
+          runs-on: ubuntu-latest
       - name: 'Checkout'
         uses: actions/checkout@master
       - name: 'Kustomize Build'
