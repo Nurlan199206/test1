@@ -73,8 +73,6 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           
-      - name: 'Kustomize'
-          runs-on: ubuntu-latest
       - name: 'Checkout'
         uses: actions/checkout@master
       - name: 'Kustomize Build'
@@ -87,4 +85,4 @@ jobs:
           kustomize_build_options: "--load_restrictor none"
           enable_alpha_plugins: true
         env:
-          GITHUB_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+          GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
