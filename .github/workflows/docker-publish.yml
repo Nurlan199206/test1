@@ -74,7 +74,6 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           
   
-     steps:
       - name: 'Checkout'
         uses: actions/checkout@master
       - name: 'Kustomize Build'
