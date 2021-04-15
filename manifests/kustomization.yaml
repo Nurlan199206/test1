@@ -3,5 +3,3 @@ resources:
 - service.yaml
 namePrefix: test-
 namespace: default
-commonLabels:
-  environment: test
