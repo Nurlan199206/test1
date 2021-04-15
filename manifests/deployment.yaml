@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: test1
-          image: nurlan1992/test1:test1-712229f
+          image: nurlan1992/test1:test1-943162e
           ports:
             - containerPort: 5000
