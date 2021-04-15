@@ -3,5 +3,7 @@ kind: Kustomization
 images:
 - name: :nurlan1992/test1
   newTag: test1-28a01cd
+- name: nurlan1992/test1
+  newTag: test1-ccb42d5
 - name: nurlan199206/test1:nurlan1992/test1
   newTag: test1-1422732
