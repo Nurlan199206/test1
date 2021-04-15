@@ -83,6 +83,7 @@ jobs:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
          cd manifests
+#         kustomize edit set image nurlan199206/test1:${{ steps.meta.outputs.tags }}
          kustomize edit set image nurlan199206/test1:${{ steps.meta.outputs.tags }}
          cat kustomization.yaml 
          
