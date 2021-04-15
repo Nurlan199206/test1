@@ -73,18 +73,30 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
        
-     
-
-      - name: 'Checkout'
-        uses: actions/checkout@master
-      - name: 'Kustomize Build'
-        uses: karancode/kustomize-github-action@master
+      - name: Setup Kustomize
+        uses: imranismail/setup-kustomize@v1
         with:
-          kustomize_version: '3.0.0'
-          kustomize_build_dir: 'manifests'
-          kustomize_comment: true
-          kustomize_output_file: "manifests/kustomization.yaml"
-          kustomize_build_options: "--load_restrictor none"
-          enable_alpha_plugins: true
+          kustomize-version: "3.6.1"
+
+      - name: Update Kubernetes resources
         env:
-          GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        run: |
+         cd kustomize/base
+         kustomize edit set image test1=$DOCKER_USERNAME/test1:$GITHUB_SHA
+         cat kustomization.yaml 
+ 
+
+#      - name: 'Checkout'
+#        uses: actions/checkout@master
+#      - name: 'Kustomize Build'
+#        uses: karancode/kustomize-github-action@master
+#        with:
+#          kustomize_version: '3.0.0'
+#          kustomize_build_dir: 'manifests'
+#          kustomize_comment: true
+#          kustomize_output_file: "manifests/kustomization.yaml"
+#          kustomize_build_options: "--load_restrictor none"
+#          enable_alpha_plugins: true
+#        env:
+#          GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
