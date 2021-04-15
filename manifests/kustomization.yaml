@@ -8,4 +8,4 @@ images:
 - name: nurlan1992/test1
   newTag: test1-5f8aa40
 - name: nurlan199206/test1:nurlan1992/test1
-  newTag: test1-66ae963
+  newTag: test1-6dcf5f0
