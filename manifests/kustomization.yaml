@@ -2,3 +2,8 @@ resources:
 - deployment.yaml
 - service.yaml
 namespace: default
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- name: nurlan199206/test1:nurlan1992/test1
+  newTag: test1-5f8aa40
