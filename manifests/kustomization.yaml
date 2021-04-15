@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-  name: test1
+name: test1
 spec:
   replicas: 1
   revisionHistoryLimit: 3
