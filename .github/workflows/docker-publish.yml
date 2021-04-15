@@ -72,7 +72,17 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          
+       
+     
+      - name: 'Kustomize GitHub Actions'
+       on:
+         - pull_request
+       jobs:
+         kustomize:
+       name: 'Kustomize'
+       runs-on: ubuntu-latest
+     steps:
+      - name: 
       - name: 'Checkout'
         uses: actions/checkout@master
       - name: 'Kustomize Build'
