@@ -82,7 +82,6 @@ jobs:
             name: 'Kustomize'
             runs-on: ubuntu-latest
             steps:
-              - name: 
               - name: 'Checkout'
                 uses: actions/checkout@master
               - name: 'Kustomize Build'
