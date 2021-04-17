@@ -85,7 +85,8 @@ jobs:
         run: |
          cd manifests
          ls -l
-         kustomize edit set image test1=${{ steps.meta.outputs.tags }} -o deployment.yaml
+         kustomize edit set image test1=${{ steps.meta.outputs.tags }}
+         kustomize build -o deployment.yaml
          cat kustomization.yaml 
          
       - name: Commit files
