@@ -84,8 +84,7 @@ jobs:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
          cd manifests
-         kustomize edit set image test1=${{ steps.meta.outputs.tags }}
-         kubectl apply -k .
+         kustomize edit set image test1=${{ steps.meta.outputs.tags }} >> deploy.yaml
 
          cat kustomization.yaml 
          
