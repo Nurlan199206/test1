@@ -3,6 +3,8 @@ resources:
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 images:
+- name: nurlan1992/test1:nurlan1992/test1
+  newTag: test1-18ee2ea
 - name: test1
   newName: nurlan1992/test1
   newTag: test1-813e14f
