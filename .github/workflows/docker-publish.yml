@@ -84,7 +84,8 @@ jobs:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
          cd manifests
-         kustomize edit set image test1=${{ steps.meta.outputs.tags }}
+         ls -l
+         kustomize edit set image test1=${{ steps.meta.outputs.tags }} -o deployment.yaml
          cat kustomization.yaml 
          
       - name: Commit files
