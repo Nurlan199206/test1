@@ -5,4 +5,4 @@ kind: Kustomization
 images:
 - name: test1
   newName: nurlan1992/test1
-  newTag: test1-97a5b2f
+  newTag: test1-e730200
