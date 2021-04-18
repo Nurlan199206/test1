@@ -105,8 +105,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GH_ACCESS_TOKEN }}   
-          destination-github-username: 'nurlan199206'
-          destination-repository-name: 'test1-manifests'
+          repository: 'test1-manifests'
  
 
 #      - name: 'Checkout'
