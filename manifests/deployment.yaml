@@ -14,7 +14,7 @@ spec:
         app: test1
     spec:
       containers:
-      - image: nurlan1992/test1:test1-54a28ac
+      - image: nurlan1992/test1:test1-be1aca9
         name: test1
         ports:
         - containerPort: 5000
