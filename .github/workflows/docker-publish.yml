@@ -104,7 +104,8 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GH_ACCESS_TOKEN }}   
+          github_token: ${{ secrets.GH_ACCESS_TOKEN }}
+          repository: nurlan199206/test-manifests
  
 
 #      - name: 'Checkout'
