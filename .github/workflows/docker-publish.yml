@@ -101,16 +101,12 @@ jobs:
 #          github_token: ${{ secrets.GH_ACCESS_TOKEN }}   
 
 
-      - name: Pushes to another repository
-        uses: cpina/github-action-push-to-another-repository@master
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.GH_ACCESS_TOKEN }}
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          source-directory: 'output'
-          destination-github-username: 'nurlan199206'
-          destination-repository-name: 'test1-manifests'
-          user-email: nurlan@localhost 
-          target-branch: main
+          github_token: ${{ secrets.GH_ACCESS_TOKEN }}
+          repository: nurlan199206/test1-manifests
+          branch: main
 
 #      - name: 'Checkout'
 #        uses: actions/checkout@master
