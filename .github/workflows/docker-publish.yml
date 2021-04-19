@@ -110,6 +110,7 @@ jobs:
           destination-github-username: 'nurlan199206'
           destination-repository-name: 'test1-manifests'
           user-email: nurlan@localhost 
+          target-branch: main
 
 #      - name: 'Checkout'
 #        uses: actions/checkout@master
