@@ -95,18 +95,18 @@ jobs:
           git config --local user.name "GitHub Action"
           git commit -am "Bump docker tag"
 
-#      - name: Push changes
-#        uses: ad-m/github-push-action@master
-#        with:
-#          github_token: ${{ secrets.GH_ACCESS_TOKEN }}   
-
-
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GH_ACCESS_TOKEN }}
-          repository: nurlan199206/test1-manifests
-          branch: main
+          github_token: ${{ secrets.GH_ACCESS_TOKEN }}   
+
+
+#      - name: Push changes
+#        uses: ad-m/github-push-action@master
+#        with:
+#          github_token: ${{ secrets.GH_ACCESS_TOKEN }}
+#          repository: nurlan199206/test1-manifests
+#          branch: main
 
 #      - name: 'Checkout'
 #        uses: actions/checkout@master
